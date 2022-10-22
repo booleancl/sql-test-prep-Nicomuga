@@ -2,7 +2,7 @@
 
 \c ecommerce
 
-SELECT rut,email, COUNT(customer_id) AS more_buys
+SELECT rut,email, COUNT(customer_id) AS purchase_count
 FROM customers
 JOIN purchases ON customers.id = customer_id
 GROUP BY rut,email
